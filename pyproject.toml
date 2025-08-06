@@ -1,0 +1,25 @@
+[project]
+name = "p4"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ast-grep-py>=0.38.3",
+    "joblib>=1.5.1",
+    "langgraph>=0.4.7",
+    "openai>=1.66.3",
+    "pydantic>=2.8.2",
+    "requests>=2.32.3",
+    "ripgrepy>=2.1.0",
+]
+
+[dependency-groups]
+dev = ["joblib-stubs>=1.5.0.1.20250510"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["p4", "p4_core"]
